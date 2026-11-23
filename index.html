@@ -1,321 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Truth They Never Told You — Asjid Rouf</title>
-<meta name="description" content="A Journey Through Life, Silence, People, and the Things We Learn Too Late. By Asjid Rouf.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--red:#b50f0f;--ink:#0a0a0a;--paper:#d9d5d2}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:#fff;font-family:'Crimson Text',Georgia,serif}
-/* HERO */
-.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;background:radial-gradient(circle at 30% 50%,#e3e0de,var(--paper) 70%);color:#000;font-family:'Archivo',Arial,sans-serif;display:flex;align-items:center}
-.hero .photo{position:absolute;right:0;top:0;height:100%;width:56%;background:#0d0d0d url(portrait.jpg) right center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%);animation:ph 1.6s .2s cubic-bezier(.2,.7,.2,1) both}
-@keyframes ph{from{opacity:0;transform:translateX(60px) scale(1.04)}to{opacity:1;transform:none}}
-.brand{position:absolute;left:5.6vw;top:10vh;font-size:15px;line-height:1.1;color:#333;animation:fd 1s .1s both}
-.handle{position:absolute;left:5.6vw;bottom:9vh;font-size:15px;color:#333;animation:fd 1s 2.2s both}
-@keyframes fd{from{opacity:0}to{opacity:1}}
-.title{position:relative;margin-left:5.6vw;z-index:2;font-weight:800;line-height:.92;letter-spacing:-.02em;font-size:clamp(64px,11.4vw,170px)}
-.title .l{display:block;overflow:hidden;padding-bottom:.04em}
-.title .l>span{display:block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
-.title .l1{font-weight:400;font-size:.42em;letter-spacing:0;margin-bottom:.12em}
-.title .l1>span{animation-delay:.3s}.l2>span{animation-delay:.6s}.l3>span{animation-delay:.95s;color:var(--red)}.l4>span{animation-delay:1.3s}
-@keyframes up{to{transform:none}}
-.line{display:block;width:min(86%,520px);height:14px;margin-top:.5em;overflow:visible}
-.line path,.arrow path{fill:none;stroke:var(--red);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1s forwards}
-.line path{stroke-width:5;animation-delay:1.8s}
-.arrow{position:absolute;left:36%;top:30%;width:9vw;max-width:90px;z-index:2}
-.arrow path{stroke-width:3;animation-delay:1.5s;animation-duration:.8s}
-@keyframes dr{to{stroke-dashoffset:0}}
-.cue{position:absolute;left:50%;bottom:3.5vh;transform:translateX(-50%);z-index:3;color:#fff;font-size:14px;text-decoration:none;background:#000;padding:12px 22px;border-radius:40px;animation:fd 1s 2.6s both}
-.cue:hover{background:var(--red)}
-/* BOOK */
-#book{min-height:100vh;min-height:100svh;padding:6vh 0 4vh;display:flex;flex-direction:column;align-items:center;background:#050505}
-.stage{position:relative;width:min(92vw,520px);aspect-ratio:924/1309;max-height:82vh;perspective:1600px}
-.pg{position:absolute;inset:0;background:var(--ink);border:1px solid #2a2a2a;box-shadow:0 30px 80px #000;display:none;overflow-y:auto;padding:9% 11% 12%;font-size:clamp(15px,2.35vw,19px);line-height:1.62;text-align:left;scrollbar-width:thin}
-.pg.on{display:block;animation:turn .7s cubic-bezier(.3,.7,.2,1)}
-.pg.back{animation:turnb .7s cubic-bezier(.3,.7,.2,1)}
-@keyframes turn{from{opacity:0;transform:rotateY(-24deg) translateX(30px);transform-origin:left}to{opacity:1;transform:none}}
-@keyframes turnb{from{opacity:0;transform:rotateY(24deg) translateX(-30px);transform-origin:right}to{opacity:1;transform:none}}
-.pg p{margin-bottom:1em;color:#e8e8e8}
-.pg .run{font-family:'Archivo',sans-serif;font-size:.62em;letter-spacing:.14em;color:#777;margin-bottom:2.2em;text-transform:uppercase}
-.pg .num{position:absolute;bottom:5%;left:0;right:0;text-align:center;font-family:'Archivo',sans-serif;font-size:.7em;color:#777}
-.pg .q{font-style:italic;font-size:1.12em;color:#fff;margin-top:1.4em}
-.c{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%}
-.sp{font-family:'Archivo',sans-serif;font-weight:400;letter-spacing:.55em;font-size:.8em;color:#ddd;padding-left:.55em}
-.big{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;line-height:.98;font-size:3.7em;font-weight:400}
-.big.o{color:transparent;-webkit-text-stroke:1.3px #fff}
-.sub{font-style:italic;font-size:1.05em;color:#ddd;margin:1.6em 0 1.8em;max-width:20em;border-top:1px solid #444;padding-top:1.3em;position:relative}
-.sub:before{content:"◆";position:absolute;top:-.62em;left:50%;transform:translateX(-50%);background:var(--ink);padding:0 .6em;font-size:.55em;color:#fff}
-.by{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.4em;font-size:.82em;padding-left:.4em}
-.at{font-family:'Archivo',sans-serif;letter-spacing:.3em;font-size:.72em;color:#999;margin-top:.5em}
-.arch{width:62%;aspect-ratio:.82;margin-bottom:11%;border:2px solid #fff;border-radius:999px 999px 0 0;background:#222 url(portrait.jpg) 72% 20%/auto 130% no-repeat;filter:grayscale(1);box-shadow:0 0 0 8px var(--ink),0 0 0 9px #fff,0 0 0 16px var(--ink),0 0 0 17px #fff}
-.toc{width:100%;text-align:left;margin-top:2em;list-style:none}
-.toc li{display:flex;gap:.8em;padding:.7em 0;border-bottom:1px solid #222;cursor:pointer;font-size:.95em}
-.toc li:hover{color:#fff;background:#111}
-.toc b{font-family:'Anton',sans-serif;font-weight:400;color:#777;width:1.8em}.toc span{flex:1}.toc i{font-style:normal;color:#777}
-.cn{font-family:'Anton',sans-serif;font-size:6em;line-height:1;margin:.1em 0 .2em;color:var(--red)}
-.ct{font-family:'Anton',sans-serif;font-size:2.1em;line-height:1.12;text-transform:uppercase;font-weight:400}
-.cq{font-style:italic;color:#bbb;margin-top:2.2em;max-width:19em;font-size:1.05em}
-.ctl{display:flex;align-items:center;gap:18px;margin-top:22px;font-family:'Archivo',sans-serif;font-size:14px;color:#aaa}
-.ctl button{background:none;border:1px solid #444;color:#fff;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer}
-.ctl button:hover:not(:disabled){background:var(--red);border-color:var(--red)}.ctl button:disabled{opacity:.3;cursor:default}
-.ctl button:focus-visible,.cue:focus-visible{outline:2px solid #fff;outline-offset:3px}
-.bar{width:min(92vw,520px);height:2px;background:#222;margin-top:20px}.bar div{height:100%;background:var(--red);width:0;transition:width .5s}
-@media(max-width:800px){.hero .photo{width:100%;opacity:.4}.hero{align-items:flex-end;padding-bottom:16vh}.title{font-size:clamp(60px,19vw,120px)}.arrow{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
-</style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="photo" role="img" aria-label="Asjid Rouf"></div>
-  <div class="brand">HajiScorpio<br>Motivation</div>
-  <h1 class="title">
-    <span class="l l1"><span>THE TRUTH</span></span>
-    <span class="l l2"><span>THEY</span></span>
-    <span class="l l3"><span>NEVER</span></span>
-    <span class="l l4"><span>TOLD YOU</span></span>
-    <svg class="line" viewBox="0 0 520 14" preserveAspectRatio="none"><path pathLength="1" d="M2 8 C120 4 300 9 517 5"/></svg>
-  </h1>
-  <svg class="arrow" viewBox="0 0 60 100"><path pathLength="1" d="M2 4 C48 2 62 50 40 84 M40 84 L52 70 M40 84 L28 78"/></svg>
-  <div class="handle">@asjidrouf</div>
-  <a class="cue" href="#book">Read the book ↓</a>
-</header>
-
-<main id="book">
-  <div class="stage" id="stage" aria-live="polite"></div>
-  <div class="bar"><div id="prog"></div></div>
-  <div class="ctl"><button id="prev" aria-label="Previous page">←</button><span id="count"></span><button id="next" aria-label="Next page">→</button></div>
-</main>
-
+:root{--bg:#050505;--fg:#eee;--ln:#333;--acc:#c01212;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+#bk{position:relative;height:calc(100% - 54px);perspective:1500px;touch-action:pan-y;overflow:hidden;user-select:none;-webkit-user-select:none}
+.pgs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateX(16%) rotateY(-12deg);transform-origin:left center;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .45s,visibility 0s .6s}
+.pgs.l{transform:translateX(-16%) rotateY(12deg);transform-origin:right center}
+.pgs.on{opacity:1;visibility:visible;transform:none;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .45s,visibility 0s}
+.pgs img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 0 30px rgba(0,0,0,.6);-webkit-user-drag:none}
+#nv{position:fixed;left:0;right:0;bottom:env(safe-area-inset-bottom,0px);height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px;background:var(--bg);border-top:1px solid var(--ln);box-sizing:border-box}
+#nv button,#nv a{background:none;border:1px solid var(--ln);color:var(--fg);height:38px;border-radius:19px;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box}
+#nv button{width:44px;font-size:20px}
+#nv a{padding:0 16px;border-color:var(--acc)}
+#nv :focus-visible{outline:2px solid var(--acc)}
+#ct{font-size:13px;letter-spacing:.12em;color:#999;min-width:58px;text-align:center}
+#pg{position:fixed;left:0;bottom:calc(54px + env(safe-area-inset-bottom,0px));height:2px;background:var(--acc);transition:width .5s}
+@media(prefers-reduced-motion:reduce){.pgs,.pgs.on{transition:opacity .2s}}
+</style></head><body>
+<div id="bk"></div><div id="pg"></div>
+<nav id="nv"><button id="pv" aria-label="Previous page">‹</button><a href="The_Truth_They_Never_Told_You.pdf" download>Download PDF</a><span id="ct"></span><button id="nx" aria-label="Next page">›</button></nav>
 <script>
-const T="THE TRUTH THEY NEVER TOLD YOU";
-const CH=[
-["The Night I Started Questioning Everything","Maybe we were simply supposed to pay attention while we were living it.",4],
-["The World Does Not See What You See","You must learn to examine yourself without constantly asking the world for permission.",7],
-["The Invisible Prison of Comparison","A photograph is not a biography.",10],
-["People Are Not Always Who We Remember","You can miss someone and still understand why they are no longer part of your life.",13],
-["The Things You Cannot Control","You can influence the direction of your life without possessing complete control over the road.",16],
-["Success Is Not the Same as Meaning","You do not need an audience to justify your efforts.",19],
-["The Person You Become in Silence","The world may never notice these changes. That does not make them insignificant.",22],
-["One Day, You Will Understand","Become someone you can live with when nobody is watching.",25]];
-// text pages: [chapterIndex, pdfPageNumber, [paragraphs]]
-const TX=[
-[0,5,[
-`It was one of those nights when the world seemed unusually quiet.`,
-`The streets were still alive. Cars passed beneath the streetlights, windows glowed in distant buildings, and somewhere, someone was probably celebrating a success that another person was desperately praying for.`,
-`But I was sitting alone, thinking.`,
-`Not about money. Not about success. Not even about the future.`,
-`I was thinking about life itself.`,
-`At some point, every person begins to question the things they once believed without hesitation. The promises they made to themselves. The people they trusted. The dreams they thought would make everything better.`,
-`When we are young, we imagine life as a straight road. We believe that if we study hard enough, work hard enough, remain honest enough, and treat people well enough, everything will eventually fall into place.`,
-`Nobody tells us how complicated that belief can become.`,
-`You can do everything right and still lose something you desperately wanted. You can give someone your sincerest intentions and still become a stranger in their story. You can spend years building something, only to discover that reaching it does not necessarily make you happy.`,
-`And perhaps that is where real thinking begins.`,
-`Not when you find all the answers, but when you finally become brave enough to question the answers you were given.`,
-`I used to think growing up meant becoming certain about everything.`]],
-[0,6,[
-`Now I think it means becoming comfortable with the fact that some things will never make complete sense.`,
-`Maybe life was never supposed to be understood all at once.`,
-`Maybe we were simply supposed to pay attention while we were living it.`]],
-[1,8,[
-`There is something strange about being human.`,
-`We spend a considerable part of our lives trying to be understood by people who have never experienced our circumstances.`,
-`We explain our decisions. We defend our silence. We try to make others understand why certain things matter to us.`,
-`Yet everyone looks at the world through a different history.`,
-`A person who has never experienced loneliness may misunderstand someone who enjoys being alone. Someone who has always had opportunities may judge the hesitation of someone who has spent years fighting for one.`,
-`People rarely see the complete person standing in front of them. They see fragments: a reaction, a decision, a photograph, a success, a mistake.`,
-`And then they create a story around those fragments.`,
-`The uncomfortable truth is that sometimes their story about you becomes more important to them than the person you actually are.`,
-`But you cannot spend your entire life correcting every misunderstanding.`,
-`There will always be someone who thinks you have changed when you have simply grown. Someone who calls you arrogant when you have finally learned to establish boundaries. Someone who considers your silence weakness because they have never understood the strength required to remain quiet.`]],
-[1,9,[
-`This does not mean every criticism is wrong. Sometimes people see things in us that we refuse to acknowledge. There is value in listening, even when listening hurts.`,
-`But there is a difference between accepting useful criticism and allowing strangers to become the authors of your identity.`,
-`You must learn to examine yourself without constantly asking the world for permission.`,
-`Because the person who lives with the consequences of your decisions is not the person watching you from a distance.`,
-`It is you.`]],
-[2,11,[
-`One of the most exhausting things a human being can do is measure an entire life against selected moments from somebody else’s.`,
-`We see someone purchasing a house and forget the years of uncertainty that may have preceded it. We see someone travelling across countries and imagine that their life must be extraordinary. We see a successful business, a beautiful relationship, a perfect photograph, and quietly begin questioning our own progress.`,
-`The problem is not that other people are succeeding.`,
-`The problem begins when their success becomes evidence, in our minds, that we are failing.`,
-`There was a time when people mostly compared themselves with those they knew personally. Today, a person can wake up and encounter hundreds of carefully selected lives before even getting out of bed.`,
-`But a photograph is not a biography.`,
-`A successful moment is not an entire existence. A smiling face does not provide a complete account of someone’s private struggles.`,
-`Psychological research describes this tendency as social comparison: the process of evaluating ourselves in relation to other people. Research on social media suggests that its effects are not identical for everyone; context, individual differences and the way platforms are used all matter.`,
-`Still, one question deserves our attention:`,
-`>Why do we allow someone else’s timeline to make us feel late in our own life?`]],
-[2,12,[
-`A tree does not grow faster because another tree has already produced fruit.`,
-`Some people discover their direction early. Others spend years searching. Some build their lives quietly, without an audience, recognition or applause.`,
-`None of these journeys automatically makes one person more valuable than another.`,
-`Perhaps maturity begins when you can genuinely appreciate another person’s progress without treating it as a personal defeat.`,
-`Your life is not a competition with people whose circumstances you barely understand.`,
-`You have your own road to walk.`,
-`And it deserves your attention.`]],
-[3,14,[
-`One of the hardest experiences in life is discovering that someone you remember is not necessarily the person they are today.`,
-`We often become attached not only to people, but to versions of them. We remember how they spoke to us, how they made ordinary days feel special, and how naturally they once occupied a place in our lives.`,
-`Then something changes.`,
-`Sometimes it happens through betrayal. Sometimes through distance. Sometimes through a disagreement that never gets resolved. And sometimes nothing dramatic happens at all.`,
-`Two people simply grow in different directions.`,
-`The difficult part is accepting that history and the present are not the same thing.`,
-`You may remember someone’s kindness, but that does not guarantee they will continue treating you kindly. You may remember a friendship as one of the most meaningful parts of your life, but that does not mean it must last forever.`,
-`We sometimes hold on because letting go feels like admitting that something beautiful has ended.`,
-`But an ending does not erase the reality of what once existed.`,
-`Not every person who leaves your life was pretending. Not every relationship that ends was a mistake. And not every distance needs to be filled with resentment.`]],
-[3,15,[
-`Some people teach us through their presence. Others teach us through their absence.`,
-`The important thing is not to become so disappointed by a few experiences that you lose your ability to trust anyone.`,
-`Wisdom is not becoming emotionally unavailable.`,
-`It is learning to remain kind without abandoning your self-respect.`,
-`You can miss someone and still understand why they are no longer part of your life.`,
-`You can forgive someone without inviting them back into the same position.`,
-`And you can appreciate the past without demanding that it return.`]],
-[4,17,[
-`There is an old philosophical idea that has survived centuries because it addresses a problem almost everyone encounters.`,
-`The Stoic philosopher Epictetus taught a distinction between things that are within our control and things that are not.`,
-`Our intentions, judgments and choices belong to one category. Other people’s opinions, unexpected events and the final outcomes of many situations belong to another.`,
-`It sounds simple.`,
-`Living by it is not.`,
-`We want people to understand us. We want our efforts to produce results. We want the future to follow the plans we have carefully constructed.`,
-`But life does not negotiate with our expectations.`,
-`You can prepare for an opportunity and still not receive it. You can love someone and still not control their decisions. You can work honestly and still encounter unfairness.`,
-`This is where many people become exhausted: they spend their energy fighting realities they cannot command.`,
-`Acceptance, however, is not surrender.`,
-`It does not mean tolerating injustice, abandoning ambition or refusing to improve difficult circumstances.`,
-`It means recognizing where your responsibility ends and where uncertainty begins.`]],
-[4,18,[
-`You are responsible for how carefully you prepare, not for guaranteeing every outcome.`,
-`You are responsible for the honesty of your actions, not for controlling every interpretation.`,
-`You can influence the direction of your life without possessing complete control over the road.`,
-`Perhaps the greatest freedom is not getting everything you want.`,
-`Perhaps it is learning that your peace does not have to depend entirely on whether the world cooperates with you.`,
-`There are things worth fighting for.`,
-`And there are things worth releasing.`,
-`Knowing the difference can change the way you live.`]],
-[5,20,[
-`We are taught to imagine success as a destination.`,
-`A certain amount of money. A respected position. A beautiful home. A recognizable name. A life that looks impressive from the outside.`,
-`And there is nothing inherently wrong with wanting these things.`,
-`Ambition can give direction to our efforts. Financial security can create opportunities. Recognition can reward years of difficult work.`,
-`But there is a question we rarely ask before chasing the next achievement:`,
-`>What if I reach it and still feel something is missing?`,
-`The Austrian psychiatrist Viktor Frankl devoted much of his work to the human search for meaning. His experiences during the Holocaust deeply shaped his thinking, although his ideas about meaning had begun developing before that period.`,
-`His work reminds us of a distinction that modern ambition sometimes overlooks: having something to achieve is not necessarily the same as having a reason to live.`,
-`Meaning can be found in meaningful work, in love, in responsibility, in creating something worthwhile, and in the way we respond to circumstances that cannot be changed.`,
-`Consider two people.`,
-`One spends years building a business but never finds time for the people who matter.`,
-`Another works a modest job, supports a family, develops a skill and quietly contributes something valuable to the lives around them.`]],
-[5,21,[
-`Which life is more successful?`,
-`There is no universal measurement that can answer that question.`,
-`Perhaps the mistake is believing that success must look impressive before it can be meaningful.`,
-`You do not have to become famous to make your existence matter.`,
-`You do not need an audience to justify your efforts.`,
-`And you do not have to turn every passion into a business, every friendship into a network, or every quiet moment into an opportunity for productivity.`,
-`Build something. Earn money. Chase your ambitions.`,
-`But do not become so occupied with constructing a life that you forget to actually experience it.`]],
-[6,23,[
-`There are parts of personal growth that nobody applauds.`,
-`Nobody sees the moment you decide not to repeat an old mistake.`,
-`Nobody hears the conversation you have with yourself after a difficult day. Nobody witnesses the small decisions that slowly separate the person you were from the person you are becoming.`,
-`We often associate transformation with dramatic events.`,
-`A new job. A new city. A new relationship. A sudden success.`,
-`But much of who we become is shaped by ordinary moments.`,
-`The decision to tell the truth when lying would be easier.`,
-`The decision to continue learning when nobody is checking your progress.`,
-`The decision to walk away from an argument that has stopped serving any purpose.`,
-`The decision to admit that you were wrong.`,
-`These moments rarely look extraordinary.`,
-`Yet they gradually build character.`,
-`There is also something important to remember: becoming a better person does not mean becoming a perfect person.`,
-`You will still have days when you doubt yourself. You may return to old habits, misunderstand people, make poor decisions and wish you had handled certain situations differently.`,
-`Growth is not a permanent state of confidence.`]],
-[6,24,[
-`Sometimes it is simply the ability to recognize a mistake sooner than you did before.`,
-`Sometimes it is an apology.`,
-`Sometimes it is trying again without making promises about how quickly everything will improve.`,
-`And sometimes it is sitting alone, acknowledging that you do not have all the answers, and choosing not to give up on yourself.`,
-`The world may never notice these changes.`,
-`That does not make them insignificant.`,
-`Some of the most important things a person builds are invisible to everyone except the person living with them.`]],
-[7,26,[
-`Perhaps one day you will look back at your life and understand why certain things did not happen the way you expected.`,
-`Perhaps you will recognize that some of your greatest lessons arrived disguised as disappointments.`,
-`Perhaps you will discover that the people you once tried so hard to impress were never responsible for determining your worth.`,
-`But perhaps some questions will remain unanswered.`,
-`And that is alright.`,
-`There is no guarantee that every painful experience will eventually reveal a beautiful purpose. Some losses are simply losses. Some people will never explain themselves. Some opportunities will never return.`,
-`We should not have to invent a happy ending for every difficult chapter just to make life feel meaningful.`,
-`There is courage in acknowledging reality without allowing it to destroy your capacity for hope.`,
-`If I have learned anything from thinking about people, ambition, relationships and time, it is this:`,
-`Life is not only about what you manage to collect before it ends.`,
-`It is also about what happens to you while you are collecting it.`,
-`Did you become someone you respect?`,
-`Did you make time for the people who genuinely mattered?`,
-`Did you allow fear to make every important decision?`]],
-[7,27,[
-`Did you become so concerned with being understood that you stopped trying to understand others?`,
-`Did you postpone happiness until a future that was never guaranteed?`,
-`These are not questions with identical answers for everyone.`,
-`They are questions worth asking.`,
-`And perhaps the truth nobody told us is not that life is cruel, that people cannot be trusted, or that happiness is impossible.`,
-`Perhaps it is something quieter.`,
-`>You can spend your entire life waiting for the world to become the way you imagined it, or you can begin learning how to live honestly in the world that actually exists.`,
-`You will not always be ahead.`,
-`You will not always be understood.`,
-`You will not always get another chance.`,
-`But while you are here, you still have choices to make, people to care for, mistakes to correct, and a life that is still unfolding.`,
-`Do not spend all of it trying to become someone worth noticing.`,
-`Become someone you can live with when nobody is watching.`]],
-[7,28,[
-`And when the world finally becomes quiet again, I hope you will not feel that you spent your entire life somewhere else.`]]
-];
-const cover=`<div class="c"><div class="arch"></div><div class="sp">THE TRUTH</div><div class="big">They<br><span class="big o">Never</span><br>Told You</div><div class="sub">A Journey Through Life, Silence, People, and the Things We Learn Too Late.</div><div class="by">ASJID ROUF</div><div class="at">@asjidrouf</div></div>`;
-const title=`<div class="c"><div class="sp">THE TRUTH</div><div class="big" style="font-size:3em">They Never<br>Told You</div><div class="sub">A Journey Through Life, Silence, People, and the Things We Learn Too Late.</div><div class="at" style="color:#aaa">WRITTEN BY</div><div class="by" style="margin-top:.4em">ASJID ROUF</div><div class="at">@asjidrouf</div></div>`;
-const S=[]; // slides: [html, label]
-S.push([cover,"Cover"]);S.push([title,"2"]);
-S.push([`<div class="c" style="justify-content:flex-start;padding-top:6%"><div class="sp">CONTENTS</div><ul class="toc">${CH.map((c,i)=>`<li data-ch="${i}"><b>0${i+1}</b><span>${c[0]}</span><i>${c[2]}</i></li>`).join("")}<li data-ch="8"><b></b><span>A Final Note</span><i>29</i></li></ul></div><div class="num">3</div>`,"3"]);
-const chStart=[];
-const esc=s=>s.replace(/&/g,"&amp;");
-CH.forEach((c,i)=>{
-  chStart[i]=S.length;
-  S.push([`<div class="run">${T}</div><div class="c"><div class="sp">CHAPTER</div><div class="cn">0${i+1}</div><div class="ct">${c[0]}</div><div class="cq">${c[1]}</div></div><div class="num">${c[2]}</div>`,String(c[2])]);
-  TX.filter(t=>t[0]===i).forEach(t=>{
-    S.push([`<div class="run">${CH[i][0]}</div>${t[2].map(p=>p[0]===">"?`<p class="q">${p.slice(1)}</p>`:`<p>${p}</p>`).join("")}<div class="num">${t[1]}</div>`,String(t[1])]);
-  });
-});
-chStart[8]=S.length;
-S.push([`<div class="c"><div class="sp">A FINAL NOTE</div><p style="margin-top:2.4em">This is not a book about having all the answers.</p><p>It is about asking better questions.</p><p style="margin-top:1.2em">Because sometimes, the truth does not change your life when you hear it.</p><p class="q">It changes your life when you finally recognize it.</p><div class="by" style="margin-top:2.5em">ASJID ROUF</div><div class="at">@asjidrouf</div></div><div class="num">29</div>`,"29"]);
-S.push([`<div class="c"><div class="sp">THE TRUTH</div><div class="big" style="font-size:2.6em;margin-top:.3em">They Never<br>Told You</div><div class="sub">A Journey Through Life, Silence, People, and the Things We Learn Too Late.</div><div class="at">@asjidrouf</div></div>`,"30"]);
-
-const st=document.getElementById("stage");
-S.forEach(s=>{const d=document.createElement("section");d.className="pg";d.innerHTML=s[0];st.appendChild(d)});
-const pgs=[...st.children];let cur=0;
-function go(n,back){
-  n=Math.max(0,Math.min(S.length-1,n));
-  pgs[cur].classList.remove("on","back");cur=n;pgs[cur].scrollTop=0;
-  pgs[cur].classList.add("on");if(back)pgs[cur].classList.add("back");
-  prev.disabled=cur===0;next.disabled=cur===S.length-1;
-  count.textContent=(S[cur][1]==="Cover"?"Cover":"Page "+S[cur][1])+" · "+(cur+1)+" / "+S.length;
-  prog.style.width=(cur/(S.length-1)*100)+"%";
+(function(){
+var P=["pages/p-01.jpg", "pages/p-02.jpg", "pages/p-03.jpg", "pages/p-04.jpg", "pages/p-05.jpg", "pages/p-06.jpg", "pages/p-07.jpg", "pages/p-08.jpg", "pages/p-09.jpg", "pages/p-10.jpg", "pages/p-11.jpg", "pages/p-12.jpg", "pages/p-13.jpg", "pages/p-14.jpg", "pages/p-15.jpg", "pages/p-16.jpg", "pages/p-17.jpg", "pages/p-18.jpg", "pages/p-19.jpg", "pages/p-20.jpg", "pages/p-21.jpg", "pages/p-22.jpg", "pages/p-23.jpg", "pages/p-24.jpg", "pages/p-25.jpg", "pages/p-26.jpg", "pages/p-27.jpg", "pages/p-28.jpg", "pages/p-29.jpg", "pages/p-30.jpg", "pages/p-31.jpg"],bk=document.getElementById('bk'),ct=document.getElementById('ct'),pg=document.getElementById('pg'),c=0,S=[];
+P.forEach(function(src,i){var d=document.createElement('div');d.className='pgs';var im=new Image();im.alt='Page '+(i+1);im.draggable=false;d.appendChild(im);bk.appendChild(d);S.push({d:d,im:im,src:src})});
+function ld(i){var s=S[i];if(s&&!s.im.getAttribute('src'))s.im.src=s.src}
+function go(i){
+  if(i<0||i>=S.length)return;c=i;ld(c-1);ld(c);ld(c+1);ld(c+2);
+  S.forEach(function(s,k){s.d.classList.toggle('on',k===c);s.d.classList.toggle('l',k<c)});
+  ct.textContent=(c+1)+' / '+S.length;pg.style.width=((c+1)/S.length*100)+'%';
+  try{localStorage.setItem('ttntp-img',c)}catch(e){}
 }
-const prev=document.getElementById("prev"),next=document.getElementById("next"),count=document.getElementById("count"),prog=document.getElementById("prog");
-prev.onclick=()=>go(cur-1,true);next.onclick=()=>go(cur+1);
-st.addEventListener("click",e=>{const li=e.target.closest("[data-ch]");if(li)go(chStart[+li.dataset.ch])});
-let vis=false;new IntersectionObserver(e=>vis=e[0].isIntersecting,{threshold:.4}).observe(document.getElementById("book"));
-addEventListener("keydown",e=>{if(!vis)return;if(e.key==="ArrowRight")go(cur+1);if(e.key==="ArrowLeft")go(cur-1,true)});
-let x0=null;st.addEventListener("touchstart",e=>x0=e.touches[0].clientX,{passive:true});
-st.addEventListener("touchend",e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)d<0?go(cur+1):go(cur-1,true);x0=null});
-go(0);
-</script>
-</body>
-</html>
+function nx(){go(c+1)}function pv(){go(c-1)}
+document.getElementById('nx').onclick=nx;document.getElementById('pv').onclick=pv;
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')nx();
+  if(e.key==='ArrowLeft'||e.key==='PageUp')pv();
+});
+var x0,y0;
+bk.addEventListener('touchstart',function(e){if(e.touches.length>1){x0=null;return}x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+bk.addEventListener('touchend',function(e){
+  if(x0==null)return;
+  var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3){dx<0?nx():pv()}
+},{passive:true});
+bk.addEventListener('click',function(e){var w=bk.clientWidth;if(e.clientX>w*.75)nx();else if(e.clientX<w*.25)pv()});
+var st=0;try{st=parseInt(localStorage.getItem('ttntp-img'))||0}catch(e){}
+go(st);
+})();
+</script></body></html>
